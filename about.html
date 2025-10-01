@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    /* ====== GLOBAL STYLES ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background:#5F9EA0;
+      color: white ;
+      transition: 0.4s, color 0.4s;
+    }
+
+    header {
+      background: #008B8B;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    #about img {
+      width: 150px;
+      border-radius: 50%;
+      margin: 20px 0;
+    }
+
+    #about ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #about ul li {
+      margin: 8px 0;
+    }
+
+    #projects ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #projects li {
+      background: #fff;
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 500px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    #projects li:hover {
+      transform: translateY(-5px);
+      background: #e0ffe0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #008B8B;
+      color: white;
+    }
+
+    /* ====== DARK MODE TOGGLE SWITCH ====== */
+    .theme-switch {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .theme-switch input {
+      display: none;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background-color: #ccc;
+      border-radius: 34px;
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background-color: #ff9800;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+
+    /* ====== DARK MODE ====== */
+    #dark-toggle:checked ~ body {
+      background: #121212;
+      color: #eee;
+    }
+
+    #dark-toggle:checked ~ body header {
+      background: #333;
+    }
+
+    #dark-toggle:checked ~ body #projects li {
+      background: #1e1e1e;
+      color: #eee;
+    }
+
+    #dark-toggle:checked ~ body footer {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        
+      </ul>
+    </nav>
+
+    <!-- Dark Mode Toggle -->
+    <label class="theme-switch">
+      <input type="checkbox" id="dark-toggle">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <!-- ====== ABOUT SECTION ====== -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="me.jpg" alt="My Photo">
+    <p>Hello! I'm Shreya, a student of Artificial Intelligence and Data Science.  
+    I love turning data into meaningful insights and creating intelligent applications.  
+    My goal is to become a Data Scientist and work on impactful AI projects.</p>
+
+    <h3>Skills</h3>
+    <ul>
+      <li>💻 Python, JavaScript, HTML, CSS</li>
+      <li>⚡ React.js, Node.js, MySQL</li>
+      <li>📊 Power BI</li>
+      
+    </ul>
+  </section>
+
+  
+  
+
+  <!-- ====== CONTACT SECTION ====== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="#">bhaleraoshreya15@gmail.com</a></p>
+    <p>LinkedIn: <a href="#">https://www.linkedin.com/in/shreya-bhalerao-869b1a296</a></p>
+    <p>GitHub: <a href="#">https://github.com/Shreya1508SB</a></p>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>&copy; 2025 Shreya's Portfolio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
